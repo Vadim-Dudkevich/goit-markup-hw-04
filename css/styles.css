@@ -46,9 +46,10 @@ img {
   height: auto;
 }
 
-.list {
+/* .list {
   list-style: none;
-}
+} */
+
 .link {
   text-decoration: none;
 }
@@ -255,14 +256,18 @@ img {
 
 /*---------------- Features ----------------*/
 .features-img {
-  width: 100%;
-  height: 120px;
-
-  margin-bottom: 30px;
+  display: flex;
   padding-top: 25px;
   padding-bottom: 25px;
+
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+
+  /* padding-top: 25px;
+  padding-bottom: 25px;
   padding-right: 100px;
-  padding-left: 100px;
+  padding-left: 100px; */
 
   background: #f5f4fa;
   border-radius: 4px;
@@ -398,13 +403,12 @@ img {
 .socials-list {
   display: flex;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .socials-item {
   width: 44px;
   height: 44px;
-
-  margin-top: 16px;
 }
 
 .socials-link {
@@ -426,9 +430,9 @@ img {
 }
 
 .socials-link:hover,
-.socials-link:active,
+.socials-link:focus,
 .socials-link:hover .socials-icon,
-.socials-link:active .socials-icon {
+.socials-link:focus .socials-icon {
   fill: var(--white-text-color);
   background-color: var(--akcent-text-color);
 }
@@ -472,7 +476,7 @@ img {
 }
 
 .clients-link:hover,
-.clients-link:active {
+.clients-link:focus {
   border-color: var(--akcent-text-color);
   fill: var(--akcent-text-color);
 }
@@ -498,10 +502,15 @@ img {
   margin-top: 30px;
 }
 
-.portfolio-item:hover,
-.portfolio-item:active {
+.portfolio-item-link {
+  display: block;
+}
+
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  display: block;
 }
 
 .text-conteiner {
@@ -553,12 +562,12 @@ img {
   margin-right: 8px;
 }
 
-.filter-item:hover,
-.filter-item:active {
+/* .filter-item:hover,
+.filter-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   border-radius: 4px;
-}
+} */
 
 .filter-button {
   padding: 6px 32px;
@@ -579,6 +588,10 @@ img {
 .filter-button:focus {
   color: var(--white-text-color);
   background-color: var(--akcent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  display: block;
 }
 
 /* ========================= Footer ========================= */
@@ -629,9 +642,11 @@ img {
   color: var(--white-text-color);
 }
 
-.address-contacts-link {
-  padding-top: 9px;
+.address-contacts-item {
+  margin-top: 9px;
+}
 
+.address-contacts-link {
   font-style: normal;
   font-size: 14px;
   line-height: 1.74;
@@ -692,6 +707,6 @@ img {
 }
 
 .footer-socials-link:hover,
-.footer-socials-link:active {
+.footer-socials-link:focus {
   background-color: var(--akcent-text-color);
 }
